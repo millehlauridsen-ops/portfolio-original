@@ -13,19 +13,28 @@ import SpotifyShortsPage from "./pages/DesignsPage/SpotifyShortsPage/SpotifyShor
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
+    <>
+      <aside className="portfolio-banner">
+        <span>Du ser min første portfolio</span>
+        <a href="https://millehlauridsen-ops.github.io/">
+          Til min nuværende portfolio ↗
+        </a>
+      </aside>
 
-      <Route path="/designs" element={<DesignsPage />} />
-      <Route path="/designs/beer-labels" element={<BeerLabelsPage />} />
-      <Route path="/designs/movie-poster" element={<MoviePosterPage />} />
-      <Route path="/designs/spotify-shorts" element={<SpotifyShortsPage />} />
-      <Route path="/websites" element={<WebsitesPage />} />
-      <Route path="/me" element={<MePage />} />
-      <Route path="/cv" element={<CvPage />} />
-      <Route path="/apps" element={<AppsPage />} />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
 
-      <Route path="*" element={<NotFoundPage />} />
-    </Routes>
+        <Route path="/designs" element={<DesignsPage />} />
+        <Route path="/designs/beer-labels" element={<BeerLabelsPage />} />
+        <Route path="/designs/movie-poster" element={<MoviePosterPage />} />
+        <Route path="/designs/spotify-shorts" element={<SpotifyShortsPage />} />
+        <Route path="/websites" element={<WebsitesPage />} />
+        <Route path="/me" element={<MePage />} />
+        <Route path="/cv" element={<CvPage />} />
+        <Route path="/apps" element={<AppsPage />} />
+
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </>
   );
 }

@@ -23,3 +23,43 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.portfolio-banner {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 10000;
+  box-sizing: border-box;
+  padding: 12px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px 24px;
+
+  background: #3d4fe0;
+  color: #fffceb;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.portfolio-banner a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.portfolio-banner a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .portfolio-banner {
+    padding: 8px 12px;
+    gap: 2px 12px;
+    font-size: 11px;
+  }
+}
